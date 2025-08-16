@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animal Gallery</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1e1e2f, #121212);
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      width: 100%;
+      padding: 15px 40px;
+      background: rgba(30, 30, 47, 0.7);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00ffe7;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 50px;
+      perspective: 1000px;
+    }
+
+    .card {
+      position: relative;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+      transform-style: preserve-3d;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: rotateY(10deg) rotateX(10deg) scale(1.05);
+      box-shadow: 0 20px 50px rgba(0, 255, 231, 0.6);
+    }
+
+    .card img {
+      width: 100%;
+      display: block;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .card figcaption {
+      padding: 15px;
+      text-align: center;
+      font-size: 1.1rem;
+      font-weight: 600;
+      background: rgba(0, 0, 0, 0.4);
+      transform: translateZ(20px);
+    }
+
+    section {
+      padding: 60px 40px;
+      background: rgba(255, 255, 255, 0.05);
+      margin: 40px auto;
+      border-radius: 15px;
+      max-width: 900px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    }
+
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #00ffe7;
+    }
+
+    section p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #ddd;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(30, 30, 47, 0.9);
+      color: #aaa;
+      margin-top: 50px;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #00ffe7;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Animal Gallery</h1>
+    <nav>
+      <ul>
+        <li><a href="#lion">Lion</a></li>
+        <li><a href="#panda">Tiger</a></li>
+        <li><a href="#elephant">Elephant</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="gallery">
+      <figure class="card">
+        <a href="#lion"><img src="./assests/images/lion.jfif" alt="Lion"></a>
+        <figcaption>Lion</figcaption>
+      </figure>
+      <figure class="card">
+        <a href="#panda"><img src="./assests/images/panda.jfif" alt="panda"></a>
+        <figcaption>Tiger</figcaption>
+      </figure>
+      <figure class="card">
+        <a href="#elephant"><img src="./assests/images/elephant.jfif" alt="Elephant"></a>
+        <figcaption>Elephant</figcaption>
+      </figure>
+    </section>
+
+    <section id="lion">
+      <h2>About Lion</h2>
+      <p>The lion, known as the king of the jungle, is a powerful and majestic animal that lives in prides. They are found mainly in Africa and are symbols of courage and strength.</p>
+    </section>
+
+    <section id="panda">
+      <h2>About Tiger</h2>
+      <p>Tigers are the largest wild cats in the world, known for their striking orange coats with black stripes. They are solitary hunters and found across Asia.</p>
+    </section>
+
+    <section id="elephant">
+      <h2>About Elephant</h2>
+      <p>Elephants are the largest land mammals, known for their intelligence, memory, and strong family bonds. They live in herds and are native to Africa and Asia.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Animal Gallery | Designed with ❤️ by You</p>
+  </footer>
+</body>
+</html>
